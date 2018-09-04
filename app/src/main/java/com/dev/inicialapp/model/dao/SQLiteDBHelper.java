@@ -5,7 +5,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class SqLiteDBHelper extends SQLiteOpenHelper {
+public class SQLiteDBHelper extends SQLiteOpenHelper {
     //definição do nome do banco de dados e versão
     public static final String DATABASE_NOME="info.db";
     private static final int DATABASE_VERSAO=1;
@@ -32,7 +32,7 @@ public class SqLiteDBHelper extends SQLiteOpenHelper {
             COLUMN_FONE+" TEXT " + ")";
 
     //Construtor
-    public SqLiteDBHelper(Context context) {
+    public SQLiteDBHelper(Context context) {
         super(context, DATABASE_NOME, null, DATABASE_VERSAO);
     }
 
