@@ -1,18 +1,126 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"  tools:context="com.sales.logsis.view.MainActivity"
+    android:background="@drawable/login_bg_new">
+
+    <View
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:alpha="0.6"
+        android:layout_alignParentTop="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="LOGIN"
+        android:textSize="70sp"
+        android:id="@+id/textView"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="DA"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:id="@+id/textView2"
+        android:layout_marginTop="72dp"
+        android:layout_alignTop="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="SUA CONTA"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/txtemail"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/ic_email_white_24dp"
+        android:hint="Entre com Usuário"
+        android:textColorHint="#cccccc"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp"
+        android:maxLines="1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:drawablePadding="10dp"
+        android:hint="Senha de Usuário"
+        android:drawableLeft="@drawable/ic_vpn_key_white_24dp"
+        android:textSize="20sp"
+        android:textColorHint="#cccccc"
+        android:textColor="#FFFFFF"
+        android:id="@+id/txtpass"
+        android:layout_below="@+id/txtemail"
+        android:layout_alignLeft="@+id/txtemail"
+        android:layout_alignStart="@+id/txtemail"
+        android:layout_alignRight="@+id/txtemail"
+        android:layout_alignEnd="@+id/txtemail"
+        android:maxLines="1" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blue_btn_drawable"
+        android:textColor="@android:color/white"
+        android:text="Acessar"
+        android:textSize="20sp"
+        android:id="@+id/btnacessar"
+        android:layout_below="@+id/txtpass"
+        android:layout_marginTop="6dp"
+        android:layout_alignLeft="@+id/txtpass"
+        android:layout_alignStart="@+id/txtpass"
+        android:layout_alignRight="@+id/txtpass"
+        android:layout_alignEnd="@+id/txtpass" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Android | Lollipop | Material | Login | Design | Activity | Google | Kitkat | Marshmallow | Google"
+        android:textColor="#FFFFFF"
+        android:alpha="0.6"
+        android:id="@+id/textView4"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="41dp"
+        android:layout_alignRight="@+id/btnacessar"
+        android:layout_alignEnd="@+id/btnacessar"
+        android:layout_alignLeft="@+id/btnacessar"
+        android:layout_alignStart="@+id/btnacessar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Novo por aqui? Registre-se agora."
+        android:id="@+id/btnreg"
+        android:textColor="#ffffff"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/btnacessar"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
