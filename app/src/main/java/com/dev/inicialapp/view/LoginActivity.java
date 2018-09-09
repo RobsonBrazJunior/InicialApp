@@ -1,16 +1,20 @@
-package com.dev.inicialapp;
+package com.dev.inicialapp.view;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
+import com.dev.inicialapp.R;
 
 import java.io.FileNotFoundException;
 
@@ -24,11 +28,11 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_login_sucesso);
 
         //PARA OCULTAR A AppBar DA TELA CHEIA.
-        ActionBar ab = getSupportActionBar();
-        ab.hide();
+//        ActionBar ab = getSupportActionBar();
+//        ab.hide();
 
         TextView txtNome = (TextView) findViewById(R.id.txt_sucesso_nome);
         TextView txtEmail = (TextView) findViewById(R.id.txt_sucesso_email);
@@ -39,10 +43,10 @@ public class LoginActivity extends AppCompatActivity {
 
         String loginNome = intent.getStringExtra("nome");
         String loginEmail = intent.getStringExtra("email");
-        txtname.setText("Bem-Vindo, " +loginNome);
-        txtemail.setText(loginEmail);
+        txtNome.setText("Bem-Vindo, " +loginNome);
+        txtEmail.setText(loginEmail);
 
-        _btnlogout.setOnClickListener(new View.OnClickListener() {
+        btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -55,9 +59,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                         startActivity(intent);
-
                         finish();
-
                     }
                 });
 
@@ -74,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        //=========Seção para mudança de imagem apresentada quando cliar=========
+        //=========Seção para mudança de imagem apresentada quando clicar=========
 
         dpImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,3 +142,4 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 }
+
